@@ -1,16 +1,23 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+const development = process.env.NODE_ENV === 'development'
+
+console.log('development', development, process.env.NODE_ENV)
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  distDir: 'dist',
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
-};
+    // distDir: 'dist',
+    eslint: {
+        ignoreDuringBuilds: false,
 
-export default nextConfig;
+    },
+    output:"standalone",
+    images: {
+        // remotePatterns: [{
+        //     protocol: 'https',
+        //     hostname: 's3.us-east-2.amazonaws.com',
+        //     port: '',
+        //     pathname: '/assets/**'
+        // }]
+    }
+}
+
+export default nextConfig
