@@ -1,0 +1,5 @@
+
+.file_uploader{
+    width: min(100%, 500px) !important;
+    height: 200px !important;
+}

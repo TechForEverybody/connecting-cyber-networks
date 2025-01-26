@@ -10,8 +10,8 @@ export async function GET(
 
     try {
         const db = await database.getConnection()
-        const query = 'SELECT * FROM course_details WHERE course_id = ?'
-        const [rows] = await db.execute(query, [slug])
+        const query = 'SELECT * FROM course_details WHERE course_id = ? OR course_slug = ?'
+        const [rows] = await db.execute(query, [slug, slug]) 
         db.release()
         return NextResponse.json(rows)
     } catch (error) {

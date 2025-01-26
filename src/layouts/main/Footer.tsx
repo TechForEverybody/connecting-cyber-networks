@@ -106,7 +106,7 @@ function Footer() {
                         color: settings.themeMode !== "dark" ? "#fff" : "#2962FF",
                         fontSize: "1.2rem",
                         fontWeight: "bold",
-                    }}>LET&apos;S TALK!</h4>
+                    }}>Let&apos;s talk!</h4>
                     <ul>
                         <li>Have questions? Contact a CCN Training Specialist today!</li>
                         <li>

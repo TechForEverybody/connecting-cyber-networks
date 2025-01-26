@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import RegistrationInitialsPage from './page'
 import { CourseDataType } from '@/types/data-responses'
 import { serverAPIPaths } from 'next.config'
+import CreateProfileComponent from './page'
 
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default async function RootLayout({
     children: React.ReactNode,
     params: Promise<{ slug: string }>
 }>) {
-    
+
     const { slug } = await params
     console.log(slug)
     const response = await fetch(`${serverAPIPaths.self}${serverAPIPaths.paths.getCourseData(slug)}`)
@@ -43,7 +43,7 @@ export default async function RootLayout({
     console.log(data)
     return (
         <div>
-            <RegistrationInitialsPage slug={slug} courseData={data[0]} />
+            <CreateProfileComponent slug={slug} courseData={data[0]} />
         </div>
     )
 }
