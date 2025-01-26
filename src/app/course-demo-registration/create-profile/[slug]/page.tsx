@@ -13,7 +13,6 @@ type Props = {
 
 
 function CreateProfileComponent({
-    slug,
     courseData
 }: Props) {
     return (

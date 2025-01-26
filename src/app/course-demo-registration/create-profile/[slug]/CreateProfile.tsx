@@ -49,11 +49,6 @@ function CreateProfile({
             [name]: value
         });
     };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log(formData);
-    };
     const handleFIleChange = async (file: File) => {
         const extension = file.name.split(".").pop();
         const newName = `${Date.now()}`;
