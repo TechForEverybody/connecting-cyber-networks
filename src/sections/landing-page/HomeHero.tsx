@@ -1,5 +1,4 @@
 'use client'
-import Laptop3DComponent from '@/components/3d/Laptop'
 import { SettingContext } from '@/contexts/SettingContext'
 import { Button, Container, Typography } from '@mui/material'
 import Grid from '@mui/material/Grid2'
@@ -11,34 +10,7 @@ import NetworkIllustration from '@/components/animations/Network'
 function HomeHero() {
     const { settings } = useContext(SettingContext)
     return <Typography component={'div'} >
-        {
-            settings.screen !== 'mobile' ? <div style={{
-                position: 'absolute',
-                top: '0',
-                right: '0',
-                width: 'min(90%,700px)',
-                height: 'min(90%,700px)',
-                transform: "translate(10%,10%)",
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 1
-            }}>
-
-                <Laptop3DComponent />
-            </div> :
-                <div style={{
-                    width: '100%',
-                    height: '500px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}>
-
-                    <Laptop3DComponent />
-                </div>
-        }
-
+        
         <Container maxWidth="xl" style={{
             width: '100%',
             height: settings.screen !== "mobile" ? '90dvh' : "auto",
