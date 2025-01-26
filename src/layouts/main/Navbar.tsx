@@ -1,11 +1,10 @@
-import { SettingContext } from '@/contexts/SettingContext'
-import { useContext, useEffect } from 'react'
+'use client'
+import {  useEffect } from 'react'
 import { NavbarConfig } from './NavbarConfig'
 import { usePathname } from 'next/navigation'
 import { Button } from '@mui/material'
 import Link from 'next/link'
 
-type Props = {}
 
 
 

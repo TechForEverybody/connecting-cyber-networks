@@ -1,17 +1,6 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import ContextProviders from './providers'
-import '../styles/index.css'
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
     title: 'Connecting Cyber Networks: The Best Ethical Hacking And Cyber Security Institute in Mumbai',
@@ -46,7 +35,7 @@ export default function RootLayout({
     return (
         <html lang="en" data-lt-installed="true" cz-shortcut-listen="true">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`antialiased`}
             >
                 <ContextProviders>{children}</ContextProviders>
             </body>

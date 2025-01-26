@@ -1,7 +1,8 @@
+'use client'
 import { Tooltip } from '@mui/material'
 import React from 'react'
 
-type Props = {}
+
 
 const partners = [
     {
@@ -44,7 +45,7 @@ const partners = [
 ]
 
 
-function PlacementPartners({ }: Props) {
+function PlacementPartners() {
     const [isHovered, setIsHovered] = React.useState(false)
     return (
         <div onMouseEnter={() => {
@@ -59,12 +60,12 @@ function PlacementPartners({ }: Props) {
             alignItems: 'center',
             // padding: '2rem',
             height: '10dvh',
-            zIndex: 10000,
+            zIndex: 100,
             position: 'relative',
         }}>
             {
                 partners.map((partner, index) => (
-                    <div key={index} className="flex items-center justify-center">
+                    <div key={index} className="flex items-center justify-center z-[200]">
                         <Tooltip title={partner.name} arrow>
 
                             <img src={partner.logo} alt={partner.name} style={{
@@ -76,7 +77,7 @@ function PlacementPartners({ }: Props) {
             }
             {
                 isHovered &&
-                <h6  style={{
+                <h6 style={{
                     position: 'absolute',
                     textAlign: 'center',
                     width: '100%',
@@ -85,7 +86,8 @@ function PlacementPartners({ }: Props) {
                     display: 'flex',
                     justifyContent: 'center',
                     // alignItems: 'center',
-                    color:"#64748b"
+                    zIndex: -1,
+                    color: "#64748b"
                 }}>
                     Our Top Placement Partner
                 </h6>

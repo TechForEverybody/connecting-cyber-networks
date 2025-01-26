@@ -9,7 +9,6 @@ import {
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { Alert, Container } from '@mui/material'
-import WebsiteLoader from '@/components/loaders/WebsiteLoader'
 
 export type SettingStateType = {
     themeMode: 'light' | 'dark'
@@ -51,8 +50,8 @@ function settingsReducer(
 
 export const SettingContext = createContext({
     settings: initialState,
-    changeSettings: (() => {}) as Dispatch<SettingActionType>,
-    toggleTheme: () => {},
+    changeSettings: (() => { }) as Dispatch<SettingActionType>,
+    toggleTheme: () => { },
 })
 
 export default function SettingContextProvider(props: {
@@ -113,6 +112,7 @@ export default function SettingContextProvider(props: {
                 toggleTheme,
             }}
         >
+
             <ToastContainer
                 position="top-right"
                 autoClose={3000}
@@ -135,6 +135,19 @@ export default function SettingContextProvider(props: {
                     status={internetStatus}
                 />
             }
+            {/* <AnimatedCursor
+                innerSize={8}
+                outerSize={35}
+                innerScale={1}
+                outerScale={1.7}
+                outerAlpha={0}
+                outerStyle={{
+                    border: '3px solid var(--cursor-color)'
+                }}
+                innerStyle={{
+                    backgroundColor: 'var(--cursor-color)'
+                }}
+            /> */}
             {props.children}
         </SettingContext.Provider>
     )

@@ -1,15 +1,14 @@
+'use client'
 import Laptop3DComponent from '@/components/3d/Laptop'
-import { ShaCDNButton } from '@/components/ui/button'
 import { SettingContext } from '@/contexts/SettingContext'
-import { Button, Container, Grid, Typography } from '@mui/material'
+import { Button, Container, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid2'
 import Link from 'next/link'
 import React, { useContext } from 'react'
 import PlacementPartners from './PlacementPartners'
 import NetworkIllustration from '@/components/animations/Network'
 
-type Props = {}
-
-function HomeHero({ }: Props) {
+function HomeHero() {
     const { settings } = useContext(SettingContext)
     return <Typography component={'div'} >
         {
@@ -23,6 +22,7 @@ function HomeHero({ }: Props) {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                zIndex: 1
             }}>
 
                 <Laptop3DComponent />
@@ -41,19 +41,25 @@ function HomeHero({ }: Props) {
 
         <Container maxWidth="xl" style={{
             width: '100%',
-            height: '90vh',
+            height: settings.screen !== "mobile" ? '90dvh' : "auto",
             overflow: 'hidden',
         }}>
+
 
             <Grid container style={{
                 minHeight: settings.screen !== "mobile" ? '90dvh' : "auto",
             }}>
-                <Grid item xs={12} md={6} sx={{
+                <Grid size={{
+                    xs: 12,
+                    md: 6,
+                }} sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'start',
+                    
                 }}>
+
                     <Typography variant="h2" sx={{
                         fontWeight: 700,
                         fontSize: 'clamp(2rem, 8vw, 4rem)',
@@ -61,12 +67,12 @@ function HomeHero({ }: Props) {
                         Want to become an Expert?
                     </Typography>
                     <Typography component="p" style={{
-                        width: 'min(80%, 800px)',
+                        width: 'min(100%, 800px)',
                     }}>
                         Security is a never-ending process of learning and growing. We will help you to become an expert in Cyber Security, Networking, Ethical Hacking And Data Science.
                     </Typography>
                     <Link href="/course-demo-registration/cyber-security-associate">
-                        <Button variant='contained' style={{
+                        <Button variant='contained' color='secondary' style={{
                             padding: '0.6rem 4rem',
                             fontSize: '1.5rem',
                             margin: '2rem 0',
@@ -91,17 +97,22 @@ function HomeHero({ }: Props) {
                         </div>
                     }
                 </Grid>
-                <Grid item xs={12} md={6} sx={{
+                <Grid size={{
+                    xs: 12,
+                    md: 6,
+                }} sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                     overflow: "visible",
+                    zIndex: -1,
                 }}>
 
                 </Grid>
 
             </Grid>
+
         </Container>
 
         <PlacementPartners />

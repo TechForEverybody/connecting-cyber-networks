@@ -1,15 +1,11 @@
 import React from 'react'
 
-type Props = {
-    slug: string
-}
 
-function page({
-    slug
-}: Props) {
-  return (
-    <div>{slug}</div>
-  )
+
+function page() {
+    return (
+        <div>page</div>
+    )
 }
 
 export default page

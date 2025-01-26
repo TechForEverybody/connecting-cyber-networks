@@ -1,4 +1,5 @@
 CREATE SCHEMA connecting_cyber_networks;
+SET SQL_SAFE_UPDATES = 0;
 
 
 user_details, CREATE TABLE user_details (

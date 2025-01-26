@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
 
-function LearningTimePredictor({}: Props) {
+
+function LearningTimePredictor() {
     return <div>LearningTimePredictor</div>
 }
 

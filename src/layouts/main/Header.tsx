@@ -1,3 +1,4 @@
+'use client'
 import { SettingContext } from '@/contexts/SettingContext'
 import {
     AppBar,
@@ -13,7 +14,6 @@ import { useContext, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import SwippleDrawer from '@/components/mui/SwippleDrawer'
 import Navbar from './Navbar'
-import { ShaCDNButton } from '@/components/ui/button'
 import Link from 'next/link'
 
 function Header() {
@@ -73,7 +73,7 @@ export function DesktopHeader() {
                         }}
                     >
                         {settings.themeMode == 'dark' ? (
-                            <Sun />
+                            <Sun color="#e0c200" />
                         ) : (
                             <Moon />
                         )}
@@ -112,15 +112,14 @@ export function MobileHeader() {
                         <Image
                             src="/logos/logo-white-bg.jpg"
                             alt="logo"
-                            width={150}
-                            height={50}
+                            width={100}
+                            height={30}
                             priority={true}
                         />
                     </Typography>
                 </Box>
                 <Box>
                     <Button
-                        variant="contained"
                         color="secondary"
                         onClick={() => {
                             toggleTheme()
@@ -129,7 +128,7 @@ export function MobileHeader() {
                         {settings.themeMode == 'dark' ? (
                             <Sun color="#e0c200" />
                         ) : (
-                            <Moon color="#FFFFFF" />
+                            <Moon  />
                         )}
                     </Button>
                 </Box>

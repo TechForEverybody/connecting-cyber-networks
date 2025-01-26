@@ -1,9 +1,10 @@
+'use client'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import React from 'react'
 
-type Props = {}
 
-function NetworkIllustration({ }: Props) {
+
+function NetworkIllustration() {
     return (
         <div
             style={{

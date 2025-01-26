@@ -1,3 +1,4 @@
+'use client'
 import { AppBar, Box, Tab, Tabs, Typography, useTheme } from '@mui/material'
 import * as React from 'react'
 
@@ -68,7 +69,7 @@ export default function HorizontalTabs(props: HorizontalTabsProps) {
                         aria-label="full width tabs example"
                     >
                         {props.components.map((component, index) => (
-                            <Tab
+                            <Tab key={index}
                                 icon={component.icon}
                                 iconPosition={component.iconPosition}
                                 label={component.title}
@@ -79,7 +80,7 @@ export default function HorizontalTabs(props: HorizontalTabsProps) {
                     </Tabs>
                 </AppBar>
                 {props.components.map((component, index) => (
-                    <TabPanel value={value} index={index} dir={theme.direction}>
+                    <TabPanel key={index} value={value} index={index} dir={theme.direction}>
                         {component.content}
                     </TabPanel>
                 ))}

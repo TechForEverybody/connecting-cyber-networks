@@ -1,10 +1,11 @@
+'use client'
 import Slide from '@mui/material/Slide'
 import { TransitionProps } from '@mui/material/transitions'
 import React from 'react'
 
 export const TransitionDown = React.forwardRef(function Transition(
     props: TransitionProps & {
-        children: React.ReactElement<any, any>
+        children: React.ReactElement
     },
     ref: React.Ref<unknown>
 ) {
@@ -12,7 +13,7 @@ export const TransitionDown = React.forwardRef(function Transition(
 })
 export const TransitionUp = React.forwardRef(function Transition(
     props: TransitionProps & {
-        children: React.ReactElement<any, any>
+        children: React.ReactElement
     },
     ref: React.Ref<unknown>
 ) {
@@ -20,7 +21,7 @@ export const TransitionUp = React.forwardRef(function Transition(
 })
 export const TransitionLeft = React.forwardRef(function Transition(
     props: TransitionProps & {
-        children: React.ReactElement<any, any>
+        children: React.ReactElement
     },
     ref: React.Ref<unknown>
 ) {
@@ -28,7 +29,7 @@ export const TransitionLeft = React.forwardRef(function Transition(
 })
 export const TransitionRight = React.forwardRef(function Transition(
     props: TransitionProps & {
-        children: React.ReactElement<any, any>
+        children: React.ReactElement
     },
     ref: React.Ref<unknown>
 ) {
