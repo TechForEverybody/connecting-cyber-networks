@@ -28,6 +28,7 @@ export function DesktopHeader() {
     return (
         <AppBar enableColorOnDark color="transparent" sx={{
             backdropFilter: 'blur(10px)',
+            zIndex:99999999
         }}>
             <Container
                 maxWidth="xl"

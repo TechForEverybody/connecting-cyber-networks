@@ -86,7 +86,7 @@ function BlogsHero() {
                                     fontSize: '1.1rem'
                                 }}>{blog.title}</Typography>
                                 <Typography variant="body1" component="p" sx={{
-                                    color: settings.themeMode=="dark"? "#BECBD6":"gray"
+                                    color: settings.themeMode == "dark" ? "#BECBD6" : "gray"
                                 }}>{blog.description.slice(0, 200)}...</Typography>
                                 <Button variant='contained' color='secondary'>Read More</Button>
                             </Card>

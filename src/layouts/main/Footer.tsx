@@ -66,11 +66,11 @@ function Footer() {
                         gap: '1rem',
                         marginTop: '1rem',
                     }}>
-                        <Image layout='fill' src="https://cdn-icons-png.flaticon.com/512/2374/2374418.png" alt="" />
-                        <Image layout='fill' src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="" />
-                        <Image layout='fill' src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" />
-                        <Image layout='fill' src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="" />
-                        <Image layout='fill' src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="" />
+                        <img  src="https://cdn-icons-png.flaticon.com/512/2374/2374418.png" alt="" />
+                        <img  src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="" />
+                        <img  src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" />
+                        <img  src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="" />
+                        <img  src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="" />
                     </div>
                 </div>
                 <div>

@@ -53,10 +53,10 @@ function PlacementPartners() {
         }} onMouseLeave={() => {
             setIsHovered(false)
         }} style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(50px, 1fr))',
+            display: 'flex',
+            // gridTemplateColumns: 'repeat(auto-fit, minmax(50px, 1fr))',
             gap: '1rem',
-            justifyContent: 'center',
+            justifyContent: 'space-around',
             alignItems: 'center',
             // padding: '2rem',
             height: '10dvh',

@@ -35,7 +35,7 @@ export default function RootLayout({
     return (
         <html lang="en" data-lt-installed="true" cz-shortcut-listen="true">
             <body
-                className={`antialiased`}
+                
             >
                 <ContextProviders>{children}</ContextProviders>
             </body>
